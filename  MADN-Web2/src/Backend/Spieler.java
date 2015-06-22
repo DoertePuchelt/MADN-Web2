@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  * @author Judith, Michi,Tobi,Doerte
  *
  */
-@XmlType(propOrder={"name","farbe","spielfigur","wuerfel"})
+@XmlType(propOrder={"name","farbe","sessionID","spielfigur","wuerfel"})
 public class Spieler implements Serializable {
 	
 	public Spieler(){
@@ -42,6 +42,8 @@ public class Spieler implements Serializable {
 	private Wuerfel wuerfel;
 	private KI ki;
 	private KIEnum kienum;
+//	@XmlAttribute
+	private String sessionID;
 
 	/**
 	 * Konstruktor mit Erstellung der Spielfiguren
@@ -193,6 +195,13 @@ public class Spieler implements Serializable {
 
 	public KI getKi() {
 		return ki;
+	}
+	
+	public String getSessionID() {
+		return sessionID;
+	}
+	public void setSessionID(String id) {
+		this.sessionID = id;
 	}
 
 	@Override

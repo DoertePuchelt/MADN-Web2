@@ -289,11 +289,11 @@ public class IndexServlet extends HttpServlet {
 				if(sc.getAttribute("s"+i) == null){
 					sc.setAttribute("s"+i, sess.getId());
 					sc.setAttribute("farbeS"+i, farbe);
+					spiel.getSpieler().get(i-1).setSessionID(sess.getId());
 					break;
 				}
 			}
 			
-			System.out.println(sess.getId()); 
 		}
 		sess.setAttribute("aktu", "2");
 		

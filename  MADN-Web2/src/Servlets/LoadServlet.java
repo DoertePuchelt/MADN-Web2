@@ -1,5 +1,6 @@
 package Servlets;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -46,8 +47,10 @@ public class LoadServlet extends HttpServlet {
 			SpielBean spiel = null;
 			try {
 				spiel = (SpielBean) ser.laden(request.getServletContext().getRealPath("")+"/"+dateiname);
-			} catch (JAXBException e) {
-				e.printStackTrace();
+			} catch (Exception e) {
+				out.print("Fehler beim laden der Datei!");
+				out.print("<br><a href='login.jsp'>zurück</a>");
+				return;
 			}
 			
 			sc.setAttribute("spiel", spiel);
@@ -58,21 +61,22 @@ public class LoadServlet extends HttpServlet {
 			SpielBean spiel = null;
 			try {
 				spiel = (SpielBean) xml.laden(request.getServletContext().getRealPath("")+"/"+dateiname);
-			} catch (JAXBException e) {
-				e.printStackTrace();
+			} catch (Exception e) {
+				out.print("Fehler beim laden der Datei!");
+				out.print("<br><a href='login.jsp'>zurück</a>");
+				return;
 			}
 			sc.setAttribute("spiel", spiel);
 			sc.setAttribute("init", 1);
+//			System.out.println(sc.getAttribute("spiel"));
 			response.sendRedirect("spiel.jsp");
+			
+		}else {
+			out.print("Fehler beim laden der Datei!");
+			out.print("<br><a href='login.jsp'>zurück</a>");
 		}
 
 		
-//		SpielBean spiel= (SpielBean) sess.getAttribute("spiel");
-//		SpielBean spiel = (SpielBean) sess.getServletContext().getAttribute("spiel");
-//		if(spiel==null){
-//			this.getServletContext().setAttribute("spiel", new SpielBean());
-//			getServletContext().setAttribute("spiel", spiel);
-//		}
 	}
 
 }

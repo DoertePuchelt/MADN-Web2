@@ -23,6 +23,7 @@ import com.itextpdf.text.DocumentException;
 import Backend.DatenzugriffCSV;
 import Backend.DatenzugriffPDF;
 import Backend.DatenzugriffSerialisiert;
+import Backend.DatenzugriffXML;
 import Backend.SpielBean;
 import Interfaces.iDatenzugriff;
 
@@ -70,8 +71,8 @@ public class SaveServlet extends HttpServlet{
 			iDatenzugriff ser = new DatenzugriffSerialisiert();
 			try {
 				ser.speichern(request.getServletContext().getRealPath("")+"/"+dateiname, dateiformat, spiel);
+				out.print("Spiel erfolgreich gespeichert");
 			} catch (JAXBException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
@@ -79,33 +80,19 @@ public class SaveServlet extends HttpServlet{
 			iDatenzugriff csv = new DatenzugriffCSV();
 			try {
 				csv.speichern(request.getServletContext().getRealPath("")+"/"+dateiname, dateiformat, spiel);
+				out.print("Spiel erfolgreich gespeichert");
 			} catch (JAXBException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}else if(dateiformat.equals(".xml")){
-			FileWriter fw = null;
-			try{
-				JAXBContext context = JAXBContext.newInstance( SpielBean.class );
-				Marshaller m = context.createMarshaller();
-				m.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
-				//m.marshal( spiel, System.out );
-				
-				fw=new FileWriter( request.getServletContext().getRealPath("")+"/"+dateiname+".xml");
-				m.marshal(spiel, fw);
-				response.sendRedirect("spielGespeichert.jsp");	
+			iDatenzugriff xml = new DatenzugriffXML();
+			try {
+				xml.speichern(request.getServletContext().getRealPath("")+"/"+dateiname, dateiformat, spiel);
+				out.print("Spiel erfolgreich gespeichert");
 			} catch (JAXBException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			finally {
-				try{
-					fw.close();
-				}
-				catch(Exception e){
-					e.printStackTrace();
-				}
-			}
+			
 		}
 
 

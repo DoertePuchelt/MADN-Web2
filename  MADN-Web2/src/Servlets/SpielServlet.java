@@ -50,7 +50,7 @@ public class SpielServlet extends HttpServlet {
 		}catch(Exception e){
 			spiel.setNaechster(spiel.getAmZug());
 		}
-//		System.out.println(spiel);
+		System.out.println(spiel);
 		
 		response.sendRedirect("spiel.jsp");
 		

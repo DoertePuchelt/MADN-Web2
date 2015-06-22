@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.xml.bind.JAXBException;
 
 import com.itextpdf.text.DocumentException;
 
@@ -651,8 +652,10 @@ public class eventHandling extends JFrame implements ActionListener, iBediener, 
 	
 	/**
 	 * Datein laden
+	 * @throws JAXBException 
+	 * @throws FileNotFoundException 
 	 */
-	public Object laden(String dateiname, String dateieinde) {
+	public Object laden(String dateiname, String dateieinde) throws FileNotFoundException, JAXBException {
 		iBediener s = new SpielBean();
 		return s.laden(dateiname, "");
 
@@ -713,7 +716,6 @@ public class eventHandling extends JFrame implements ActionListener, iBediener, 
 
 	}
 
-	@Override
 	public void Speichern(String dateiname, String dateiende) throws IOException {
 		// TODO Auto-generated method stub
 	}
@@ -740,6 +742,12 @@ public class eventHandling extends JFrame implements ActionListener, iBediener, 
 	public int setIconBild(int erg) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public void Speichern(String dateiname, String dateiende, iBediener o) throws IOException {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

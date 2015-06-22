@@ -12,7 +12,7 @@ window.onload=function() {
 <title>Spiel</title>
 </head>
 <body>
-<% 
+<%
 if(application.getAttribute("init").equals("0")){
 	spiel.initSpiel();
 	application.setAttribute("init", "1");
@@ -20,9 +20,13 @@ if(application.getAttribute("init").equals("0")){
 %>
 	<center>
 		
-<%for(int i=1; i<=4; i++){
-//	System.out.println(i+" "+application.getAttribute("s"+i));
-//	System.out.println(i+" "+application.getAttribute("farbeS"+i));
+<%
+for(int i=1; i<=spiel.getSpieler().size(); i++){
+	application.setAttribute("s"+i, spiel.getSpieler().get(i-1).getSessionID());
+	application.setAttribute("farbeS"+i, spiel.getSpieler().get(i-1).getFarbe1());
+}
+
+for(int i=1; i<=4; i++){
 	if(spiel.getAmZug().getFarbe1().equals(application.getAttribute("farbeS"+i))){
 		application.setAttribute("amZug", application.getAttribute("s"+i));
 		application.setAttribute("amZugFarbe", application.getAttribute("farbeS"+i));

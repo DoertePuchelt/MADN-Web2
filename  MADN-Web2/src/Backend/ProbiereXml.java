@@ -20,33 +20,35 @@ public class ProbiereXml {
 	public static void main(String[] args) throws JAXBException, IOException {
 		 
 		 
-		SpielBean spiel= new SpielBean();
-		spiel.SpielerHinzufuegen("asf", "red", null);
-		spiel.SpielerHinzufuegen("asd", "blue", null);
+//		SpielBean spiel= new SpielBean();
+//		spiel.SpielerHinzufuegen("asf", "red", null);
+//		spiel.SpielerHinzufuegen("asd", "blue", null);
+//		
+//		spiel.initSpiel();
+//		
+//		try{
+//			JAXBContext context = JAXBContext.newInstance( SpielBean.class );
+//			Marshaller m = context.createMarshaller();
+//			m.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
+//			m.marshal( spiel, System.out );
+//			fw=new FileWriter("Spielstand" + ".xml");
+//			m.marshal(spiel, fw);
+//		}
+//		finally {
+//			try{
+//				fw.close();
+//			}
+//			catch(Exception e){
+//				e.printStackTrace();
+//			}
+//		}
+
+		SpielBean s = (SpielBean) laden();
+		System.out.println(s);
 		
-		spiel.initSpiel();
-		
-		try{
-			JAXBContext context = JAXBContext.newInstance( SpielBean.class );
-			Marshaller m = context.createMarshaller();
-			m.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
-			m.marshal( spiel, System.out );
-			fw=new FileWriter("Spielstand" + ".xml");
-			m.marshal(spiel, fw);
-		}
-		finally {
-			try{
-				fw.close();
-			}
-			catch(Exception e){
-				e.printStackTrace();
-			}
-		}
-		laden();
-	
 	}
 	
-	public static void laden() throws JAXBException, FileNotFoundException{
+	public static Object laden() throws JAXBException, FileNotFoundException{
 		JAXBContext context;
 		context = JAXBContext.newInstance(SpielBean.class);
 		Unmarshaller um = context.createUnmarshaller();
@@ -63,6 +65,7 @@ public class ProbiereXml {
 			}
 			
 		}
+		return s;
 		
 	}
 
