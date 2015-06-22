@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -14,7 +15,12 @@ import Interfaces.iDatenzugriff;
 
 import com.itextpdf.text.DocumentException;
 
-public class DatenzugriffXML implements iDatenzugriff {
+public class DatenzugriffXML implements iDatenzugriff, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Override
 	public void speichern(String dateiname, String dateiende, Object o) throws IOException, JAXBException {

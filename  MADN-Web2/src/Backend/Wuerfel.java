@@ -2,6 +2,8 @@ package Backend;
 
 import java.io.Serializable;
 import java.util.Random;
+
+import javax.xml.bind.annotation.XmlElement;
 /**
  * klasse zum Wuerfeln
  * @author Judith, Michi,Tobi,Doerte
@@ -14,6 +16,7 @@ public class Wuerfel implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	@XmlElement(name="ergebnis")
 	private int ergebnis;
 	
 	

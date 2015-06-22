@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  * @author Judith, Michi,Tobi,Doerte
  *
  */
-@XmlType(propOrder={"name","farbe","spielfigur"})
+@XmlType(propOrder={"name","farbe","spielfigur","wuerfel"})
 public class Spieler implements Serializable {
 	
 	public Spieler(){
@@ -38,6 +38,7 @@ public class Spieler implements Serializable {
 	
 	@XmlAttribute
 	private String name;
+	@XmlElement(name="wuerfel")
 	private Wuerfel wuerfel;
 	private KI ki;
 	private KIEnum kienum;

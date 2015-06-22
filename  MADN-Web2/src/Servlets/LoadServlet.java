@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import javax.xml.bind.JAXBException;
 
 import Backend.DatenzugriffSerialisiert;
+import Backend.DatenzugriffXML;
 import Backend.SpielBean;
 import Interfaces.iDatenzugriff;
 
@@ -40,17 +41,30 @@ public class LoadServlet extends HttpServlet {
 		
 		String dateiname = request.getParameter("dateiname");
 		
-		iDatenzugriff ser = new DatenzugriffSerialisiert();
-		SpielBean spiel = null;
-		try {
-			spiel = (SpielBean) ser.laden(request.getServletContext().getRealPath("")+"/"+dateiname);
-		} catch (JAXBException e) {
-			e.printStackTrace();
+		if(dateiname.contains(".ser")){
+			iDatenzugriff ser = new DatenzugriffSerialisiert();
+			SpielBean spiel = null;
+			try {
+				spiel = (SpielBean) ser.laden(request.getServletContext().getRealPath("")+"/"+dateiname);
+			} catch (JAXBException e) {
+				e.printStackTrace();
+			}
+			
+			sc.setAttribute("spiel", spiel);
+			sc.setAttribute("init", 1);
+			response.sendRedirect("spiel.jsp");
+		}else if(dateiname.contains(".xml")){
+			iDatenzugriff xml = new DatenzugriffXML();
+			SpielBean spiel = null;
+			try {
+				spiel = (SpielBean) xml.laden(request.getServletContext().getRealPath("")+"/"+dateiname);
+			} catch (JAXBException e) {
+				e.printStackTrace();
+			}
+			sc.setAttribute("spiel", spiel);
+			sc.setAttribute("init", 1);
+			response.sendRedirect("spiel.jsp");
 		}
-		
-		sc.setAttribute("spiel", spiel);
-		sc.setAttribute("init", 1);
-		response.sendRedirect("spiel.jsp");
 
 		
 //		SpielBean spiel= (SpielBean) sess.getAttribute("spiel");

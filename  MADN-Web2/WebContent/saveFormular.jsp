@@ -7,7 +7,7 @@
 <body>
 	<h2>Speichern Sie das Spiel</h2>
 <p>
-<form method='post' action='XMLServlet'>
+<form method='post' action='SaveServlet'>
 	Dateiname: <input name="Dateiname" type="text" size="30" maxlength="30">
 	<select name="auswahl">
 		<option value="csv">.csv</option>
