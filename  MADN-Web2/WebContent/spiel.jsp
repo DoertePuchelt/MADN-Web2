@@ -90,75 +90,13 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[9].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[9].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[9].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[10].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[10].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[10].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
 										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 9&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
 										out.print("<a href='spiel.jsp?feld=Spielfeld 9&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 9&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
 										out.print("<a href='spiel.jsp?feld=Spielfeld 9&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
@@ -173,6 +111,68 @@ if(application.getAttribute("init").equals("0")){
 										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 9&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
 										out.print("<a href='spiel.jsp?feld=Spielfeld 9&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[9].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[9].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[9].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[10].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[10].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[10].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -222,27 +222,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
 										out.print("<a href='spiel.jsp?feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 8&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -261,27 +261,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 10&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -316,27 +316,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 7&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -355,27 +355,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 11&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -396,27 +396,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 6&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -435,27 +435,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 12&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -504,68 +504,6 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 0&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 0&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 0&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 0&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 0&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 0&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 0&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 0&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[2].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[2].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[2].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 1&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 1&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 1&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 1&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 1&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 1&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 1&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 1&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[3].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[3].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[3].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
 										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 2&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
 										out.print("<a href='spiel.jsp?feld=Spielfeld 2&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
@@ -591,9 +529,9 @@ if(application.getAttribute("init").equals("0")){
 							}
 						%></td>
 						<td><%
-							if(spiel.getBrett().getSpielbrett()[4].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[4].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[4].getFelder()[0].getSpielfigur().getFarbe();
+							if(spiel.getBrett().getSpielbrett()[2].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[2].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[2].getFelder()[0].getSpielfigur().getFarbe();
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
@@ -621,6 +559,68 @@ if(application.getAttribute("init").equals("0")){
 								}
 							}
 						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[3].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[3].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[3].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 4&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[4].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[4].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[4].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 5&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
 						<td id="eb4"><%
 							if(spiel.getBrett().getSpielbrett()[9].getFelder()[4].getSpielfigur() != null){
 								int id = spiel.getBrett().getSpielbrett()[9].getFelder()[4].getSpielfigur().getID();
@@ -633,68 +633,6 @@ if(application.getAttribute("init").equals("0")){
 							if(spiel.getBrett().getSpielbrett()[14].getFelder()[0].getSpielfigur() != null){
 								int id = spiel.getBrett().getSpielbrett()[14].getFelder()[0].getSpielfigur().getID();
 								FarbEnum farbe = spiel.getBrett().getSpielbrett()[14].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 13&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[15].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[15].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[15].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 14&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[16].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[16].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[16].getFelder()[0].getSpielfigur().getFarbe();
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
@@ -723,9 +661,9 @@ if(application.getAttribute("init").equals("0")){
 							}
 						%></td>
 						<td><%
-							if(spiel.getBrett().getSpielbrett()[17].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[17].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[17].getFelder()[0].getSpielfigur().getFarbe();
+							if(spiel.getBrett().getSpielbrett()[15].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[15].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[15].getFelder()[0].getSpielfigur().getFarbe();
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
@@ -754,9 +692,9 @@ if(application.getAttribute("init").equals("0")){
 							}
 						%></td>
 						<td><%
-							if(spiel.getBrett().getSpielbrett()[18].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[18].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[18].getFelder()[0].getSpielfigur().getFarbe();
+							if(spiel.getBrett().getSpielbrett()[16].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[16].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[16].getFelder()[0].getSpielfigur().getFarbe();
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
@@ -784,6 +722,68 @@ if(application.getAttribute("init").equals("0")){
 								}
 							}
 						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[17].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[17].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[17].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[18].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[18].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[18].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
 					</tr>
 					<tr>
 						<td><%
@@ -793,27 +793,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 40&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 40&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 40&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 40&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 40&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 40&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 40&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 40&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -889,27 +889,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 18&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -919,6 +919,68 @@ if(application.getAttribute("init").equals("0")){
 							if(spiel.getBrett().getSpielbrett()[38].getFelder()[0].getSpielfigur() != null){
 								int id = spiel.getBrett().getSpielbrett()[38].getFelder()[0].getSpielfigur().getID();
 								FarbEnum farbe = spiel.getBrett().getSpielbrett()[38].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 39&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 39&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 39&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 39&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 39&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 39&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 39&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 39&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[37].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[37].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[37].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 38&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[36].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[36].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[36].getFelder()[0].getSpielfigur().getFarbe();
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
@@ -947,9 +1009,9 @@ if(application.getAttribute("init").equals("0")){
 							}
 						%></td>
 						<td><%
-							if(spiel.getBrett().getSpielbrett()[37].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[37].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[37].getFelder()[0].getSpielfigur().getFarbe();
+							if(spiel.getBrett().getSpielbrett()[35].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[35].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[35].getFelder()[0].getSpielfigur().getFarbe();
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
@@ -978,9 +1040,9 @@ if(application.getAttribute("init").equals("0")){
 							}
 						%></td>
 						<td><%
-							if(spiel.getBrett().getSpielbrett()[36].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[36].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[36].getFelder()[0].getSpielfigur().getFarbe();
+							if(spiel.getBrett().getSpielbrett()[34].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[34].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[34].getFelder()[0].getSpielfigur().getFarbe();
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
@@ -1008,68 +1070,6 @@ if(application.getAttribute("init").equals("0")){
 								}
 							}
 						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[35].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[35].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[35].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[34].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[34].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[34].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
 						<td id="ey4"><%
 							if(spiel.getBrett().getSpielbrett()[29].getFelder()[4].getSpielfigur() != null){
 								int id = spiel.getBrett().getSpielbrett()[29].getFelder()[4].getSpielfigur().getID();
@@ -1082,6 +1082,68 @@ if(application.getAttribute("init").equals("0")){
 							if(spiel.getBrett().getSpielbrett()[24].getFelder()[0].getSpielfigur() != null){
 								int id = spiel.getBrett().getSpielbrett()[24].getFelder()[0].getSpielfigur().getID();
 								FarbEnum farbe = spiel.getBrett().getSpielbrett()[24].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[23].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[23].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[23].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[22].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[22].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[22].getFelder()[0].getSpielfigur().getFarbe();
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
@@ -1110,9 +1172,9 @@ if(application.getAttribute("init").equals("0")){
 							}
 						%></td>
 						<td><%
-							if(spiel.getBrett().getSpielbrett()[23].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[23].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[23].getFelder()[0].getSpielfigur().getFarbe();
+							if(spiel.getBrett().getSpielbrett()[21].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[21].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[21].getFelder()[0].getSpielfigur().getFarbe();
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
@@ -1141,9 +1203,9 @@ if(application.getAttribute("init").equals("0")){
 							}
 						%></td>
 						<td><%
-							if(spiel.getBrett().getSpielbrett()[22].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[22].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[22].getFelder()[0].getSpielfigur().getFarbe();
+							if(spiel.getBrett().getSpielbrett()[20].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[20].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[20].getFelder()[0].getSpielfigur().getFarbe();
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
@@ -1171,68 +1233,6 @@ if(application.getAttribute("init").equals("0")){
 								}
 							}
 						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[21].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[21].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[21].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 20&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[20].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[20].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[20].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 19&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -1246,27 +1246,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 34&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -1285,27 +1285,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 24&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -1326,27 +1326,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 33&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -1365,27 +1365,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 25&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -1420,27 +1420,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 32&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -1459,27 +1459,27 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 								}else if(farbe.equals(FarbEnum.BLUE)){
 									String s= "Spielfigur "+id+" Blau";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
 								}else if(farbe.equals(FarbEnum.GREEN)){
 									String s= "Spielfigur "+id+" Gruen";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
 								}else if(farbe.equals(FarbEnum.YELLOW)){
 									String s= "Spielfigur "+id+" Gelb";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 26&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+										out.print("<a href='spiel.jsp?feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
@@ -1528,6 +1528,68 @@ if(application.getAttribute("init").equals("0")){
 								if(farbe.equals(FarbEnum.RED)){
 									String s= "Spielfigur "+id+" Rot";
 									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 31&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[29].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[29].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[29].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
+								}else if(farbe.equals(FarbEnum.BLUE)){
+									String s= "Spielfigur "+id+" Blau";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
+								}else if(farbe.equals(FarbEnum.GREEN)){
+									String s= "Spielfigur "+id+" Gruen";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
+								}else if(farbe.equals(FarbEnum.YELLOW)){
+									String s= "Spielfigur "+id+" Gelb";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
+										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+									else
+										out.print("<a href='spiel.jsp?feld=Spielfeld 30&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
+								}
+							}
+						%></td>
+						<td><%
+							if(spiel.getBrett().getSpielbrett()[28].getFelder()[0].getSpielfigur() != null){
+								int id = spiel.getBrett().getSpielbrett()[28].getFelder()[0].getSpielfigur().getID();
+								FarbEnum farbe = spiel.getBrett().getSpielbrett()[28].getFelder()[0].getSpielfigur().getFarbe();
+								if(farbe.equals(FarbEnum.RED)){
+									String s= "Spielfigur "+id+" Rot";
+									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
 										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 29&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
 									else
 										out.print("<a href='spiel.jsp?feld=Spielfeld 29&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
@@ -1549,68 +1611,6 @@ if(application.getAttribute("init").equals("0")){
 										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 29&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 									else
 										out.print("<a href='spiel.jsp?feld=Spielfeld 29&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[29].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[29].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[29].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 28&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-								}
-							}
-						%></td>
-						<td><%
-							if(spiel.getBrett().getSpielbrett()[28].getFelder()[0].getSpielfigur() != null){
-								int id = spiel.getBrett().getSpielbrett()[28].getFelder()[0].getSpielfigur().getID();
-								FarbEnum farbe = spiel.getBrett().getSpielbrett()[28].getFelder()[0].getSpielfigur().getFarbe();
-								if(farbe.equals(FarbEnum.RED)){
-									String s= "Spielfigur "+id+" Rot";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("red"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_rot.png'></a>");
-								}else if(farbe.equals(FarbEnum.BLUE)){
-									String s= "Spielfigur "+id+" Blau";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("blue"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_blau.png'></a>");
-								}else if(farbe.equals(FarbEnum.GREEN)){
-									String s= "Spielfigur "+id+" Gruen";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("green"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_gruen.png'></a>");
-								}else if(farbe.equals(FarbEnum.YELLOW)){
-									String s= "Spielfigur "+id+" Gelb";
-									if(session.getId().equals(application.getAttribute("amZug")) && spiel.getAmZug().getFarbe1().equals("yellow"))
-										out.print("<a href='spiel.jsp?id="+id+"&feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
-									else
-										out.print("<a href='spiel.jsp?feld=Spielfeld 27&figur="+s+"'><img src='bilder/Figur_gelb.png'></a>");
 								}
 							}
 						%></td>
