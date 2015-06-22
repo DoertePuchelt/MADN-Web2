@@ -20,6 +20,8 @@ public interface iDatenzugriff {
 	Object laden(String dateiname) throws JAXBException, FileNotFoundException;
 
 	 void spielfeld(SpielBean spiel) throws FileNotFoundException, DocumentException;
+
+	void spielfeld(SpielBean spiel, String dateiname, String pfad) throws FileNotFoundException, DocumentException;
 	
 	
 

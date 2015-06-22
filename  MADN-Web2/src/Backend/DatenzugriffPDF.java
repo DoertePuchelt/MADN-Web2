@@ -28,7 +28,10 @@ public class DatenzugriffPDF implements iDatenzugriff, Serializable {
 	private static final long serialVersionUID = 1L;
 
 
-
+	@Override
+	public void spielfeld(SpielBean spiel) throws FileNotFoundException, DocumentException {
+		spielfeld(spiel, "Spielstand", "/");
+	}
 
 
 
@@ -36,13 +39,13 @@ public class DatenzugriffPDF implements iDatenzugriff, Serializable {
 
 
 	@Override
-	public  void spielfeld(SpielBean spiel) throws FileNotFoundException, DocumentException {
+	public  void spielfeld(SpielBean spiel, String dateiname, String pfad) throws FileNotFoundException, DocumentException {
 		
 		Rectangle pageSize = new Rectangle(216f, 720f);
 
 		Document document = new Document(pageSize, 36f, 72f, 108f, 180f);
 
-		PdfWriter.getInstance(document, new FileOutputStream("Spielstand.pdf"));
+		PdfWriter.getInstance(document, new FileOutputStream(pfad+dateiname+".pdf"));
 		document.open();
 
 		PdfPTable table1 = new PdfPTable(1);
@@ -1663,6 +1666,8 @@ public class DatenzugriffPDF implements iDatenzugriff, Serializable {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 
 	
 	

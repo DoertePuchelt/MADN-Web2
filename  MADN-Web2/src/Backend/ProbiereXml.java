@@ -52,7 +52,7 @@ public class ProbiereXml {
 		Unmarshaller um = context.createUnmarshaller();
 		
 		 
-		 SpielBean s = (SpielBean)um.unmarshal(new FileReader( "xml.xml"));
+		 SpielBean s = (SpielBean)um.unmarshal(new FileReader( "Spielstand.xml"));
 		
 	
 		if(s!=null){

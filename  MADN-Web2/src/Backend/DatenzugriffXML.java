@@ -69,5 +69,11 @@ public class DatenzugriffXML implements iDatenzugriff {
 		
 	}
 
+	@Override
+	public void spielfeld(SpielBean spiel, String dateiname, String pfad) throws FileNotFoundException, DocumentException {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

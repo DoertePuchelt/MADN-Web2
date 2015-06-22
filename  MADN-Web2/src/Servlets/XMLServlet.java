@@ -62,11 +62,11 @@ public class XMLServlet extends HttpServlet {
 		}
 
 		xml= (request.getParameter("auswahl"));
-		String dateiname= request.getParameter("dateiname");
+		String dateiname= request.getParameter("Dateiname");
 		
 		
 		request.getSession(true).setAttribute("auswahl", xml);
-		request.getSession(true).setAttribute("dateiname", xml);
+		request.getSession(true).setAttribute("Dateiname", xml);
 		
 		
 		if(spiel!=null){
@@ -79,7 +79,7 @@ public class XMLServlet extends HttpServlet {
 					m.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
 					//m.marshal( spiel, System.out );
 					
-					fw=new FileWriter( dateiname+".xml");
+					fw=new FileWriter( request.getServletContext().getRealPath("")+"/"+dateiname+".xml");
 					m.marshal(spiel, fw);
 					response.sendRedirect("spielGespeichert.jsp");	
 				} catch (JAXBException e) {

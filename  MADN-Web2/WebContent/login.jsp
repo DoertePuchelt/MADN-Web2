@@ -34,11 +34,16 @@
 			out.println("<option>4</option>");
 			
 			out.println("</select>");
-		
 		session.setAttribute("aktu", "1");
 	%>
-	</br>
+	<br/>
 	<input id='senden' type='submit' value='OK'>
+	</form>
+	<br/>
+	<form method="get" action="LoadServlet">
+	Dateiname: 
+	<input name='dateiname' type='text' size='20'>
+	<input id=laden type="submit" value="laden">
 	</form>
 	</div>
 <%@ include file="footer.jsp" %>

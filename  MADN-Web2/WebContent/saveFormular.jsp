@@ -5,9 +5,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Speichern Sie das Spiel</h1>
+	<h2>Speichern Sie das Spiel</h2>
 <p>
-<form method='get' action='XMLServlet'>
+<form method='post' action='XMLServlet'>
 	Dateiname: <input name="Dateiname" type="text" size="30" maxlength="30">
 	<select name="auswahl">
 		<option value="csv">.csv</option>
