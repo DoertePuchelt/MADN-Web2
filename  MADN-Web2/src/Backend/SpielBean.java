@@ -1,10 +1,19 @@
 package Backend;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Serializable;
 import java.util.ArrayList;
+
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlIDREF;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 import Backend.Spieler.Spielfigur;
 import GUIswing.MngJFrame;
@@ -17,16 +26,24 @@ import Interfaces.iDatenzugriff;
  * @author Judith, Michi, Doerte, Tobi
  *
  */
+@XmlRootElement(namespace="http://localhost:8080/MADN-Web/index.jsp")
+@XmlType(propOrder={"brett","spieler","gewaehlteKis", "gewaehlteSpieler","geschmissen","amZug","logging"})
 public class SpielBean implements iBediener, Serializable {
 
 	private static final long serialVersionUID = 1L;
+	@XmlElement(name="brett")
 	private Spielbrett brett;
+	
+	@XmlElement
+	@XmlElementWrapper(name="Spieler") 
 	private ArrayList<Spieler> spieler;
+	
+	@XmlElement(name="amZug")
 	private Spieler amZug;
 	private Spielfigur geschmissen;
 	private Regelwerk regelwerk;
 	private String dateiname;
-	private MngJFrame gui;
+	//private MngJFrame gui;
 	private String log;
 	private int gewaehlteSpieler=0;
 	private int gewaehlteKis=0;
@@ -35,6 +52,7 @@ public class SpielBean implements iBediener, Serializable {
 	
 	private iDatenzugriff d = new DatenzugriffCSV();
 	private iDatenzugriff s = new DatenzugriffSerialisiert();
+	private DatenzugriffXML x= new DatenzugriffXML();
 
 	/**
 	 * Konstruktor der Spielklasse Spielbrett, Regelwerk und Spieler werden
@@ -49,7 +67,7 @@ public class SpielBean implements iBediener, Serializable {
 	
 	public SpielBean(MngJFrame gui){
 		this();
-		this.gui = gui;
+	//	this.gui = gui;
 	}
 
 	/**
@@ -83,7 +101,7 @@ public class SpielBean implements iBediener, Serializable {
 	 * 
 	 * @return spieler
 	 */
-
+@XmlTransient
 	public ArrayList<Spieler> getSpieler() {
 		return spieler;
 	}
@@ -98,7 +116,7 @@ public class SpielBean implements iBediener, Serializable {
 	 * 
 	 * @return amZug
 	 */
-
+@XmlTransient
 	public Spieler getAmZug() {
 		return amZug;
 	}
@@ -108,18 +126,19 @@ public class SpielBean implements iBediener, Serializable {
 	 * 
 	 * @param amZug
 	 */
+	
 	public void setAmZug(Spieler amZug) {
 		this.amZug = amZug;
 //		System.out.println(getAmZug().toString() + " ist am Zug");
 		setLogging(getAmZug().toString() + " ist am Zug");
-		if(gui != null)
-			gui.getAusgabe().setText(gui.getAusgabe().getText()+"\n"+getAmZug().toString() + " ist am Zug");
+		//if(gui != null)
+			//gui.getAusgabe().setText(gui.getAusgabe().getText()+"\n"+getAmZug().toString() + " ist am Zug");
 		getAmZug().getWuerfel().wuerfeln();
 //		getAmZug().getWuerfel().wuerfel2();
 //		getAmZug().getWuerfel().wurf6();
 		setLogging(getAmZug().getWuerfel().getErgebnis()+" gewuerfelt");
-		if(gui != null)
-			gui.getAusgabe().setText(gui.getAusgabe().getText()+"\n"+getAmZug().getWuerfel().getErgebnis()+" gewuerfelt");
+		//if(gui != null)
+			//gui.getAusgabe().setText(gui.getAusgabe().getText()+"\n"+getAmZug().getWuerfel().getErgebnis()+" gewuerfelt");
 
 		if (amZug.getKi() != null) {
 			amZug.getKi().kiZug();
@@ -346,8 +365,8 @@ public class SpielBean implements iBediener, Serializable {
 	}
 	@Override
 	public int setIconBild(int erg){
-		if(gui != null)
-			gui.setIconNeu(erg);
+		//if(gui != null)
+			//gui.setIconNeu(erg);
 		return erg;
 	}
 	/**
@@ -399,7 +418,7 @@ public class SpielBean implements iBediener, Serializable {
 	}
 
 	@Override
-	public Object laden(String dateiname, String dateiende) {
+	public Object laden(String dateiname, String dateiende) throws FileNotFoundException, JAXBException {
 		if (dateiende.equals("csv")) {
 			// this.brett = new Spielbrett();
 			spieler.clear();
@@ -484,7 +503,15 @@ public class SpielBean implements iBediener, Serializable {
 	}
 
 	@Override
-	public void Speichern(String dateiname, String dateiende) throws IOException {
+	public void Speichern(String dateiname, String dateiende, iBediener o) throws IOException {
+		if(dateiende.equals(".xml")){
+			try{
+				x.speichern(dateiname, dateiende, o);
+			}catch (JAXBException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		if (dateiende.equals("csv")) {
 			String s = "";
 			for (Spieler spieler : this.getSpieler()) {
@@ -550,11 +577,21 @@ public class SpielBean implements iBediener, Serializable {
 
 			}
 
-			d.speichern(dateiname, dateiende, s);
+			try {
+				d.speichern(dateiname, dateiende, o);
+			} catch (JAXBException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
 		} else {
 			if (dateiende.equals("ser")) {
-				s.speichern(dateiname, dateiende, this);
+				try {
+					s.speichern(dateiname, dateiende, this);
+				} catch (JAXBException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 
@@ -565,12 +602,12 @@ public class SpielBean implements iBediener, Serializable {
 	}
 
 	public void setGui(MngJFrame gui) {
-		this.gui = gui;
+	//	this.gui = gui;
 	}
 
-	public MngJFrame getGui() {
-		return gui;
-	}
+	//public MngJFrame getGui() {
+		//return gui;
+	//}
 	public Spielfigur getGeschmissen() {
 		return geschmissen;
 	}

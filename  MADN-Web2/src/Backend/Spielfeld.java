@@ -2,6 +2,12 @@ package Backend;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlIDREF;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
+
 import Backend.Spieler.Spielfigur;
 
 /**
@@ -11,13 +17,17 @@ import Backend.Spieler.Spielfigur;
  *
  */
 
+@XmlType(propOrder={"position","spielfigur","farbe"})
 public class Spielfeld implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private static int counter = 0;
+	
 	private String id;
+
+
 	private Spielfigur spielfigur;
 	private FarbEnum farbe = null;
 	private int position = 0;
@@ -64,6 +74,7 @@ public class Spielfeld implements Serializable {
 	 * 
 	 * @return ID des Spielfeldes
 	 */
+
 	public String getID() {
 		return id;
 	}
@@ -73,6 +84,8 @@ public class Spielfeld implements Serializable {
 	 * 
 	 * @return position
 	 */
+	
+	
 	public int getPosition() {
 		if(id.contains("S") || id.contains("E")){
 			return 0;
@@ -90,6 +103,8 @@ public class Spielfeld implements Serializable {
 	 * 
 	 * @param spielfigur
 	 */
+
+	
 	public void setSpielfigur(Spielfigur spielfigur) {
 		this.spielfigur = spielfigur;
 	}
@@ -99,6 +114,8 @@ public class Spielfeld implements Serializable {
 	 * 
 	 * @return spielfigur
 	 */
+	
+
 	public Spielfigur getSpielfigur() {
 		return spielfigur;
 	}

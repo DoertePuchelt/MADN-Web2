@@ -4,23 +4,39 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlIDREF;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
+
 /**
  * Klasse fuer die Verwaltung eines Spieler
  * 
  * @author Judith, Michi,Tobi,Doerte
  *
  */
-
+@XmlType(propOrder={"name","farbe","spielfigur"})
 public class Spieler implements Serializable {
+	
+	public Spieler(){
+		
+	}
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	@XmlElementWrapper(name="Spielfigur")
+	@XmlElement(name="spielfigur")
 	private Spielfigur[] spielfigur;
-
+	
+	
 	private FarbEnum farbe;
+	
+	@XmlAttribute
 	private String name;
 	private Wuerfel wuerfel;
 	private KI ki;
@@ -50,7 +66,7 @@ public class Spieler implements Serializable {
 
 		this.spielfigur = new Spielfigur[4];
 		for (int i = 0; i < 4; i++) {
-			spielfigur[i] = new Spielfigur(i + 1, getFarbe());
+			spielfigur[i] = new Spielfigur(i + 1, getFarbe(),this);
 		}
 
 	}
@@ -117,6 +133,8 @@ public class Spieler implements Serializable {
 	 * 
 	 * @return name name des Spielers
 	 */
+	
+@XmlTransient
 	public String getName() {
 		return name;
 	}
@@ -126,6 +144,7 @@ public class Spieler implements Serializable {
 	 * 
 	 * @param farbe gewaehlte farbe des Spielers
 	 */
+@XmlElement(name="farbe")
 	private void setFarbe(FarbEnum farbe) {
 		this.farbe = farbe;
 	}
@@ -135,6 +154,7 @@ public class Spieler implements Serializable {
 	 * 
 	 * @param name
 	 */
+	//@XmlElement(name="name")
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -145,6 +165,8 @@ public class Spieler implements Serializable {
 	 * @param i
 	 * @return Spielfigur mit angegebener ID
 	 */
+	
+
 	public Spielfigur getSpielfigur(int i) {
 		i = i - 1;
 		if (i < 0) {
@@ -154,7 +176,6 @@ public class Spieler implements Serializable {
 
 	}
 
-	
 	public Spielfigur getSpielfigurNeu(int i) {
 		return spielfigur[i];
 
@@ -187,15 +208,22 @@ public class Spieler implements Serializable {
 	 *
 	 */
 
-	public class Spielfigur implements Serializable {
+	public static class Spielfigur implements Serializable {
+		
+		public Spielfigur(){
+		}
+		
 		/**
 		 * 
 		 */
 		private static final long serialVersionUID = 1L;
+		
+		@XmlElement(name="id")
 		private int ID;
 		private Spielfeld spielfeld;
 		private FarbEnum farbe;
 		private boolean hatUmrundet;
+		private Spieler spieler;
 
 		/**
 		 * Kontruktor der Inneren Klasse kann nur ueber die Spielerklasse
@@ -204,11 +232,12 @@ public class Spieler implements Serializable {
 		 * @param ID uebergibt jeder erstellte Spielfigur eine ID
 		 */
 
-		private Spielfigur(int ID, FarbEnum farbe) {
+		private Spielfigur(int ID, FarbEnum farbe, Spieler spieler) {
 			this.ID = ID;
 			this.spielfeld = null;
 			this.farbe = farbe;
 			this.setHatUmrundet(false);
+			this.spieler=spieler;
 		}
 
 		/**
@@ -229,6 +258,7 @@ public class Spieler implements Serializable {
 		 * 
 		 * @return ID der Spielfigur
 		 */
+		
 		public int getID() {
 			return ID;
 		}
@@ -238,6 +268,8 @@ public class Spieler implements Serializable {
 		 * 
 		 * @return Spielfeld
 		 */
+		
+		@XmlTransient
 		public Spielfeld getSpielfeld() {
 			return spielfeld;
 		}
@@ -270,7 +302,7 @@ public class Spieler implements Serializable {
 
 		@Override
 		public String toString() {
-			return "Spielfigur" + "" + getID() + "_" + getName() + "_" + getFarbe();
+			return "Spielfigur" + "" + getID() + "_" + spieler.getName() + "_" + getFarbe();
 		}
 
 	}

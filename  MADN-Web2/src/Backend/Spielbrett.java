@@ -2,6 +2,10 @@ package Backend;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlElement;
+
+
+
 /** Diee Klasse stellt das Spielbrett dar
  * @author Judth, Michi,Tobi,Doerte
  * @version 1
@@ -12,6 +16,8 @@ public class Spielbrett implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	@XmlElement(name="Spielbrett")
 	private FeldWrapper spielbrett[];
 	
 	

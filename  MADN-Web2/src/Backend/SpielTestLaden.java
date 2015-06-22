@@ -13,7 +13,7 @@ public class SpielTestLaden {
 //		s=(Spiel)speicherSer.laden("supertest5");
 //		s.zugDurchfuehren(2);
 		
-		s.laden("CSVFinal", "csv");
+	//	s.laden("CSVFinal", "csv");
 	
 		
 		

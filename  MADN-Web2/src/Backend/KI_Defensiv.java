@@ -55,9 +55,9 @@ public class KI_Defensiv extends KI implements Serializable {
 			super.getSpiel().setNaechster(super.getSpieler());
 			keinZug = true;
 		}if (!keinZug) {
-			super.getSpiel().getGui().getKiWeiter().setEnabled(true);
-			super.getSpiel().getGui()
-					.KIFigurenZiehen(super.getSpieler().getSpielfigur(id));
+		//	super.getSpiel().getGui().getKiWeiter().setEnabled(true);
+			//super.getSpiel().getGui()
+					//.KIFigurenZiehen(super.getSpieler().getSpielfigur(id));
 			setGezogenButton(true);
 		}
 	}

@@ -10,18 +10,14 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import com.itextpdf.text.DocumentException;
-
-import sun.awt.FwDispatcher;
-import Fehler_Exceptions.SpielerFarbeVorhandenException;
-import Fehler_Exceptions.SpielerNichtGefundenException;
 import Interfaces.iDatenzugriff;
-import Spiel.SpielBean;
+
+import com.itextpdf.text.DocumentException;
 
 public class DatenzugriffXML implements iDatenzugriff {
 
 	@Override
-	public void speichern(String dateiname, String dateiende, Object o) throws IOException {
+	public void speichern(String dateiname, String dateiende, Object o) throws IOException, JAXBException {
 		
 		
 		FileWriter fw = null;
@@ -51,15 +47,19 @@ public class DatenzugriffXML implements iDatenzugriff {
 	}
 
 	@Override
-	public Object laden(String dateipfad) {
+	public Object laden(String dateipfad) throws JAXBException, FileNotFoundException {
 
 		JAXBContext context=JAXBContext.newInstance(SpielBean.class);
 		Unmarshaller um = context.createUnmarshaller();
-		SpielBean s = (SpielBean)um.unmarshal(new FileReader(dateipfad));
+		SpielBean s;
+		
+			s = (SpielBean)um.unmarshal(new FileReader(dateipfad));
+			return s;
 		
 		
 		
-		return s;
+		
+		
 	}
 
 	@Override

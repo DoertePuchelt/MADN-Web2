@@ -2,6 +2,8 @@ package Backend;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlElement;
+
 import Backend.Spieler.Spielfigur;
 /**
  *Wrapper Klasse fuer das einfuegen von Start und Endfeldern des Spiels
@@ -11,13 +13,19 @@ import Backend.Spieler.Spielfigur;
  */
 
 public class FeldWrapper implements Serializable {
+	
+	public FeldWrapper(){
+		
+	}
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	@XmlElement(name="Felder")
 	private Spielfeld [] felder;
-	private Spielfigur spielfigur;
+	//private Spielfigur spielfigur;
 	
 	
 	/**
