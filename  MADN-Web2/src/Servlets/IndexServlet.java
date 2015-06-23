@@ -88,13 +88,11 @@ public class IndexServlet extends HttpServlet {
 				spiel.SpielerHinzufuegen(lName, lFarbe, null);
 				
 			}if (spiel.getGewaehlteSpieler() != 0 && ki==true) {
-				System.out.println("spieler 0, ki true");
 					spiel.SpielerHinzufuegen(name, farbe, null);
 				}
 			
 			if(spiel.getGewaehlteKis()!=0 && spiel.getGewaehlteSpieler()==0 && ki==false){
 				ki=true;
-				System.out.println("spieler 0");
 				switch(spiel.getGewaehlteKis()){
 				case 1:spiel.SpielerHinzufuegen("ki1", "red", "DEFENSIV");
 				break;
@@ -102,14 +100,12 @@ public class IndexServlet extends HttpServlet {
 				case 2:
 					spiel.SpielerHinzufuegen("ki1", "red", "AGGRESSIV");
 					spiel.SpielerHinzufuegen("ki1", "blue", "AGGRESSIV");
-					System.out.println("case2ki");
 					break;
 					
 				case 3:
 					spiel.SpielerHinzufuegen("ki1", "red", "AGGRESSIV");
 					spiel.SpielerHinzufuegen("ki1", "blue", "AGGRESSIV");
 					spiel.SpielerHinzufuegen("ki1", "green", "AGGRESSIV");
-					System.out.println("spieler 3");
 					break;
 				case 4:
 					spiel.SpielerHinzufuegen("ki1", "red", "AGGRESSIV");
@@ -121,7 +117,6 @@ public class IndexServlet extends HttpServlet {
 			}
 			
 		}if(spiel.getGewaehlteKis()!=0 && spiel.getGewaehlteSpieler()!=0 && ki==false) {
-			System.out.println("sspieler 1 und ki");
 			spiel.SpielerHinzufuegen(name, farbe, null);
 				boolean red= false;
 				boolean blue= false;
@@ -139,7 +134,6 @@ public class IndexServlet extends HttpServlet {
 						for (int i = 0; i < spiel.getSpieler().size(); i++) {
 							if (spiel.getSpieler().get(i).getFarbe1()
 									.equals("red")) {
-								System.out.println("redtrue");
 								red = true;
 							}
 							if (spiel.getSpieler().get(i).getFarbe1()
@@ -158,7 +152,6 @@ public class IndexServlet extends HttpServlet {
 					}
 					if (red == false && z==0) {
 						spiel.SpielerHinzufuegen("ki1", "red", "AGGRESSIV");
-						System.out.println("kired");
 						z++;
 					}
 					if (blue == false&& z==0) {
@@ -198,22 +191,18 @@ public class IndexServlet extends HttpServlet {
 							spiel.SpielerHinzufuegen( "ki1","red", "AGGRESSIV");
 							z++;
 						}if(blue==false&&z<2){
-							System.out.println("kiblue");
 							spiel.SpielerHinzufuegen( "ki1","blue", "AGGRESSIV");
 							z++;
 						}if(green==false&&z<2){
-							System.out.println("green");
 							spiel.SpielerHinzufuegen( "ki1","green", "AGGRESSIV");
 							z++;
 						} if(yellow==false&&z<2){
-							System.out.println("yellow");
 							spiel.SpielerHinzufuegen( "ki1","yellow", "AGGRESSIV");
 							z++;
 						}
 					
 				break;
 				case 3:
-					System.out.println("case3");
 					for(int i=0; i<spiel.getSpieler().size();i++){
 						if(spiel.getSpieler().get(i).getFarbe1().equals("red")){
 							red=true;
@@ -229,19 +218,15 @@ public class IndexServlet extends HttpServlet {
 						}
 						if(red==false&&z<3){
 							spiel.SpielerHinzufuegen( "ki1","red", "AGGRESSIV");
-							System.out.println("casered");
 							z++;
 						}if(blue==false&&z<3){
 							spiel.SpielerHinzufuegen( "ki1","blue", "AGGRESSIV");
-							System.out.println("caseblue");
 							z++;
 						}if(green==false&&z<3){
 							spiel.SpielerHinzufuegen( "ki1","green", "AGGRESSIV");
-							System.out.println("casegreen");
 							z++;
 						}if(yellow==false&&z<3){
 							spiel.SpielerHinzufuegen( "ki1","yellow", "AGGRESSIV");
-							System.out.println("caseyellow");
 							z++;
 						}
 					}
@@ -304,7 +289,6 @@ public class IndexServlet extends HttpServlet {
 			response.sendRedirect("spiel.jsp");
 		}
 		
-		//System.out.println(spiel.getSpieler().size());
 		int spielerAnzahl=spiel.getGewaehlteKis()+spiel.getGewaehlteSpieler();
 	     String uri = request.getRequestURI();
 	     if (request.getQueryString() != null)

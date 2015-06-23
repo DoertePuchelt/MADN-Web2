@@ -76,7 +76,7 @@ public class LoadServlet extends HttpServlet {
 			out.print("<br><a href='login.jsp'>zurück</a>");
 		}
 
-		
+		System.out.println(request.getServletContext().getRealPath(""));
 	}
 
 }
